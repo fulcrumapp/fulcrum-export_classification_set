@@ -1,11 +1,18 @@
+# -*- coding: utf-8 -*-
+import json
+import csv
+import sys
+import getopt
+
+
 def recursive(level, count):  
     array = []
     loop = count
     while loop > 0:
         array.append('')
         loop = loop - 1
-    array.append(level['label'])
-    array.append(level['value'])
+    array.append(level['label'].encode('utf-8'))
+    array.append(level['value'].encode('utf-8'))
     file.writerow(array)
     if('child_classifications' not in level):
         return
@@ -15,10 +22,9 @@ def recursive(level, count):
             recursive(l, count)
 
 
-import json
-import csv
+fullCmdArguments = sys.argv
 
-classFile = 'example.classes' # name of file. 
+classFile = fullCmdArguments[2] # name of file. 
 count = 0
 
 with open(classFile, 'rt') as file:
