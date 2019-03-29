@@ -14,4 +14,4 @@ In the python script, change the name of the file to match the file that you hav
 
 The python script and classes file will need to be in the same folder.
 
-Run the script from terminal with `python classification.py`
+Run the script from terminal with `python classification.py --input 'file-name.classes`
