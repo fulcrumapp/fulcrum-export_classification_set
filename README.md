@@ -4,6 +4,18 @@ This tool can be used to export classification sets to a csv file.
 
 A library for getting a csv file of classification sets produced in Fulcrum.
 
+# Option 1 (from API)
+
+## Requirements
+Requires python installed, [Fulcrum Python API wrapper](https://github.com/fulcrumapp/fulcrum-python) installed, Fulcrum API token, and the ID of the classification set.    
+
+classification set ID can be obtained from the web app.  When the classification set is open for an edit within [web.fulcrumapp.com](https://web.fulcrumapp.com/) you can get the classification set ID from the address bar between the text that reads /classification_sets and /edit
+
+## Usage
+Run the script from terminal with `python classification-set-to-csv-with-API.py -t {token} -cs {classification_set_id}`
+
+# Option 2 (from file)
+
 ## Requirements
 Requires python installed and .classes files from classification set. 
 
